@@ -27,6 +27,6 @@ scf
   noscf
 end
 
-task scf gradient
+task scf energy
 
 
