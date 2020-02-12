@@ -40,6 +40,7 @@ for curAtom in allAtoms:
         if curAxis != 0:
             for step in step_list:
                 print('#modified atom: %s | axis: %s | step size: %s' % (count,curAxis, step))
+                print(len(allAtoms))
                 for i in allAtoms:
                     if i !=curAtom:
                         print(i)
