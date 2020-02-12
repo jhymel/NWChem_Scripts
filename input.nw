@@ -1,7 +1,7 @@
 start
 title "gradient with PC perturbation template"
 
-geometry units au noautosym nocenter noautoz
+geometry noautosym nocenter noautoz
   O    0.00000000     0.00000000     0.20187565
   H   -1.48374995     0.00000000    -0.80751304
   H    1.48374995     0.00000000    -0.80751304
