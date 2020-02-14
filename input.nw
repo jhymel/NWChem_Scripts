@@ -2,9 +2,9 @@ start
 title "gradient with PC perturbation template"
 
 geometry noautosym nocenter noautoz
-  O    0.00000000     0.00000000     0.20187565
-  H   -1.48374995     0.00000000    -0.80751304
-  H    1.48374995     0.00000000    -0.80751304
+  O                         0.00000009    -0.00000000    -0.11495327
+  H                        -0.78516649    -0.00000000    -0.64909866
+  H                         0.78516639     0.00000000    -0.64909849
 end
 basis
   *  library 6-31g
