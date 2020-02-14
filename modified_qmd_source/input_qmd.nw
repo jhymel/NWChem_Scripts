@@ -1,0 +1,22 @@
+start veel_test
+title "veels MD test"
+echo
+geometry noautosym nocenter noautoz
+  O                         0.00000009    -0.00000000    -0.11495327
+  H                        -0.78516649    -0.00000000    -0.64909866
+  H                         0.78516639     0.00000000    -0.64909849
+end
+basis
+  * library 6-31G
+end
+
+qmd
+  read_force
+  nstep_nucl  1000
+  dt_nucl     10.0
+  targ_temp   0.000000001
+  com_step    10
+  print_xyz   5
+end
+
+task scf qmd
