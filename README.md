@@ -3,7 +3,7 @@ Scripts built for either setting up NWChem inputs or preprocessing for inputs
 
 #### Directories of interest:
 - modified_qmd_source
-  - Contains Fortran files for compiling the NWChem build necessary needed to run our VEELS QMD simulations 
+  - Contains Fortran files for compiling the NWChem build needed to run our VEELS QMD simulations 
 - point_charge_scan_numerical_template
   - Template for building directories for several QMD simulations at once, specifically simulating VEEL spectra for a given XYZ structure using forces produced by a point charge perturbation and computed using a central finite difference numerical method.
 - point_charge_scan_analytical_template
