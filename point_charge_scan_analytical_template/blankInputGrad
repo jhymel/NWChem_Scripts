@@ -1,0 +1,21 @@
+start
+title "gradient with PC perturbation template"
+
+geometry noautosym nocenter noautoz
+end
+basis
+  *  library 3-21g*
+end
+
+bq test
+end
+
+set bq test
+
+scf
+maxiter 200
+vectors input input.movecs output output.movecs
+direct
+end
+
+task scf gradient

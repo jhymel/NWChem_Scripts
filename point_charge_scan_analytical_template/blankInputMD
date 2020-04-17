@@ -1,0 +1,21 @@
+start
+echo
+print high
+geometry noautosym noautoz
+end
+basis
+  * library 3-21g*
+end
+scf
+  maxiter 200
+  direct
+end
+qmd
+  read_force
+  nstep_nucl  2000
+  dt_nucl     10.0
+  targ_temp   1e-10
+  com_step    2100
+  print_xyz   1
+end
+task scf qmd
