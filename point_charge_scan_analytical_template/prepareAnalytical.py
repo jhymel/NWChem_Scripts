@@ -12,17 +12,17 @@ import sys
 
 home = os.getcwd()
 
-#templateFolder = sys.argv[1]
-#gradInput = sys.argv[2]
-#mdInput = sys.argv[3]
-#pcInput = sys.argv[4]
-#inputGeom = sys.argv[5]
+inputGeom = sys.argv[1]
+pcInput = sys.argv[2]
+#templateFolder = sys.argv[3]
+#gradInput = sys.argv[4]
+#mdInput = sys.argv[5]
 
+#inputGeom = 'example_xyz_file'
+#pcInput = 'example_pcInput_file'
 templateFolder = 'template'
 gradInput = 'blankInputGrad'
 mdInput = 'blankInputMD'
-pcInput = 'pcInput_distance'
-inputGeom = 'benzene.xyz'
 
 with open(pcInput,'r') as f:
 	for lineNumber, line in enumerate(f):
