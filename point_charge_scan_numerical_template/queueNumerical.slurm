@@ -26,7 +26,7 @@ source ~/nwchem-6.8/build_env.sh
 
 home="$(pwd)"
 numberSims=$(find . -name 'pcPosition*' | wc -l)
-nwchemPath=$NWCHEM_TOP/bin/LINUX64/nwchem
+nwchemPath='~/nwchem-6.8/bin/LINUX64/nwchem'
 xyzFile='*.xyz'
 
 for i in $(seq 0 $(( $numberSims - 1)) )
@@ -39,7 +39,8 @@ do
       mpirun -n 16 $nwchemPath input$j.nw > input$j.out
    done
    echo making grad0
-   python computeGradients.py $xyzFile
+   stepSize=$(sed '3q;d' gradient_estimation.out | awk '{ print $10 }')
+   python computeGradients.py $xyzFile $stepSize
    mpirun -n 4 $nwchemPath mdInput$i.nw > mdCalc.out &
    cd $home
 done
