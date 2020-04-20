@@ -28,10 +28,17 @@ elif 'dft' == str(commands.getoutput("tail -1 gradInput*.nw")).split(' ')[1].low
                         if ' '.join(line.split()) == 'DFT ENERGY GRADIENTS':
                                 start = lineNumber
 
+# Writes 2 files:
+# grad0 : the file that stores all atom forces to be read when read_force flag called in modified NWChem qmd input file
+# human_readable_grad0 : matrix form of grad0 with row and column labels
 with open(gradientOutputFile,'r') as g:
-	with open('grad0','w+') as h:
-		buff = g.readlines()
-		for i in range(start+4,start+4+numAtoms):
-			h.write(buff[i].split()[5] + '\n')
-			h.write(buff[i].split()[6] + '\n')
-			h.write(buff[i].split()[7] + '\n')
+        with open('human_readable_grad0','w+') as k:
+                k.write('\t'.join(['Atoms','Force(X)','Force(Y)','Force(Z)']) + '\n')
+                with open('grad0','w+') as h:
+                        buff = g.readlines()
+                        for i in range(start+4,start+4+numAtoms):
+                                h.write(buff[i].split()[5] + '\n')
+                                h.write(buff[i].split()[6] + '\n')
+                                h.write(buff[i].split()[7] + '\n')
+                                k.write('\t'.join([buff[i].split()[1],buff[i].split()[5],buff[i].split()[6],buff[i].split()[7]]) + '\n')
+

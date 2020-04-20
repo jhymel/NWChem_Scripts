@@ -16,12 +16,12 @@
 	1. Perform a geometry optimization on your molecule of interest at a particular level of theory.
 	2. Place that xyz file in this current directory, following the formating of the example file "example_xyz_file".
 	3. Modify the "blankInputGrad" and "blankInputMD" NWChem files so that they are using the same level of theory used in the geometry optimization in step 1.
-	4. Create an input file containing the strength and coordinates for each point charge you want to examine, following the formating of the example file "example_pcInput_file".
-	   Important point: Each point charge (line of this file) will result in a different QMD simulation being run.
+	4. Create an input file containing the charge and coordinates for each point charge you want to examine, following the formating of the example file "example_pcInput_file".
+	   Important point: Each point charge (line of the input file) will result in a different QMD simulation being run.
 	5. Run the command "python prepareNumerical.py inputGeom pcInput" (replacing inputGeom and pcInput with the names of your xyz file and point charge input file).
 	   This creates directories where each calculation of forces and QMD simulation will be run. Directories are named pcPosition* where * is the line number of pcInput used to generate.
-	   Important Point: Since this implementation uses a central finite difference method, a stepsize need to be designated. By default this is set to 1.0e-5.
+	   Important Point: Since this implementation uses a central finite difference method, a stepsize needs to be designated. By default this is set to 1.0e-5.
 	6. Open queueNumerical.slurm and make adjustments according to your cluster/resources/NWChem binary location (runNumerical.sh can also be used in an interactive session).
 	7. Batch the slurm file using "sbatch queueNumerical.slurm" 
-	8. Once jobs are complete, QMD output files name mdCalc.out can be found in each pcPosition directory.
+	8. Once jobs are complete, QMD output files named mdCalc.out can be found in each pcPosition directory.
 
