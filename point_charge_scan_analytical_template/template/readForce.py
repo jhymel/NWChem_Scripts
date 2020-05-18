@@ -16,14 +16,14 @@ numAtoms = len(open(inputGeom).readlines())
 # The below statement checks if the already completed gradient calculation used Hartree-Fock or DFT
 if 'scf' == str(commands.getoutput("tail -1 gradInput*.nw")).split(' ')[1].lower():
 	start = 0
-	with open(readFile,'r') as f:
+	with open(gradientOutputFile,'r') as f:
 		for lineNumber, line in enumerate(f):
 			if ' '.join(line.split()) == 'RHF ENERGY GRADIENTS':
 				start = lineNumber
 
 elif 'dft' == str(commands.getoutput("tail -1 gradInput*.nw")).split(' ')[1].lower():
         start = 0
-        with open(readFile,'r') as f:
+        with open(gradientOutputFile,'r') as f:
                 for lineNumber, line in enumerate(f):
                         if ' '.join(line.split()) == 'DFT ENERGY GRADIENTS':
                                 start = lineNumber
