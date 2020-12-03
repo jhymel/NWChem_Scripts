@@ -10,3 +10,6 @@ Scripts built for either setting up NWChem inputs or preprocessing for inputs
   - Template for building directories for several QMD simulations at once, specifically simulating VEEL spectra for a given XYZ structure using forces produced by a point charge perturbation and computed using the analytical gradient machinery in NWChem.
 - spectra_tools
   - Files necessary for creating dipole and power spectra from QMD output files.
+
+Example of vibrational response from scanning point charges along the C<sub>6</sub> axis of benzene
+<img src="VEELS_figure_784.PNG" width="45%"></img>
