@@ -11,6 +11,6 @@ Scripts built for either setting up NWChem inputs or preprocessing for inputs
 - spectra_tools
   - Files necessary for creating dipole and power spectra from QMD output files.
 
-#### Example- Distance dependance of vibrational response for benzene:
+#### Example- Point charge distance dependance of vibrational response in benzene:
 ![](VEELS_figure_784.PNG)
 ![](VEELS_figure_1078.png)
