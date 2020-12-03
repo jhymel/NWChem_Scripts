@@ -12,5 +12,5 @@ Scripts built for either setting up NWChem inputs or preprocessing for inputs
   - Files necessary for creating dipole and power spectra from QMD output files.
 
 ### Example of vibrational response from scanning point charges along the C<sub>6</sub> axis of benzene
-<img src="VEELS_figure_784.PNG" width="100%"></img>
-<img src="VEELS_figure_1078.png" width="100%"></img>
+<img src="VEELS_figure_784.PNG" width="75%"></img> <img src="Benzene_784.gif" width="25%"></img>
+<img src="VEELS_figure_1078.png" width="75%"></img> <img src="Benzene_1078.gif" width="25%"></img>
