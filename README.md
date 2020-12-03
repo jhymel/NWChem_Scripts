@@ -13,3 +13,4 @@ Scripts built for either setting up NWChem inputs or preprocessing for inputs
 
 ### Example of vibrational response from scanning point charges along the C<sub>6</sub> axis of benzene
 <img src="VEELS_figure_784.PNG" width="100%"></img>
+<img src="VEELS_figure_1078.PNG" width="100%"></img>
